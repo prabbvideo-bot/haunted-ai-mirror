@@ -38,7 +38,7 @@ This repository includes both **`render.yaml`** (Render Blueprint) and a product
 2. Connect your repository.
 3. Configure the settings:
    - **Environment**: `Node`
-   - **Build Command**: `npm install && npm run build`
+   - **Build Command**: `npm install --legacy-peer-deps && npm run build`
    - **Start Command**: `npm run start`
    - **Plan**: Free or Starter
 4. Under **Environment Variables**, add:
@@ -52,7 +52,7 @@ This repository includes both **`render.yaml`** (Render Blueprint) and a product
 
 ```bash
 # 1. Install dependencies
-npm install
+npm install --legacy-peer-deps
 
 # 2. Configure environment
 cp .env.example .env
