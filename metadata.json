@@ -1,0 +1,11 @@
+{
+  "name": "The Haunted Mirror",
+  "description": "An eerie Victorian Gothic haunted mirror that detects faces, applies spectral visual effects, and generates spoken prophecies and poetic riddles based on what it sees and hears.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme {
+  --font-cinzel: 'Cinzel', serif;
+  --font-garamond: 'Cormorant Garamond', serif;
+  --font-playfair: 'Playfair Display', serif;
+}
+
+@layer utilities {
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+  .font-garamond {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+/* Atmospheric candlelight flicker */
+@keyframes candleFlicker {
+  0%, 100% {
+    opacity: 0.85;
+    transform: scale(1) translate(0, 0);
+    filter: drop-shadow(0 0 16px rgba(251, 146, 60, 0.45));
+  }
+  20% {
+    opacity: 0.95;
+    transform: scale(1.04) translate(-1px, 1px);
+    filter: drop-shadow(0 0 24px rgba(251, 146, 60, 0.65));
+  }
+  40% {
+    opacity: 0.78;
+    transform: scale(0.97) translate(1px, -1px);
+    filter: drop-shadow(0 0 14px rgba(251, 146, 60, 0.35));
+  }
+  60% {
+    opacity: 0.92;
+    transform: scale(1.02) translate(0.5px, 0.5px);
+    filter: drop-shadow(0 0 20px rgba(251, 146, 60, 0.55));
+  }
+  80% {
+    opacity: 0.82;
+    transform: scale(0.99) translate(-0.5px, -0.5px);
+    filter: drop-shadow(0 0 18px rgba(251, 146, 60, 0.4));
+  }
+}
+
+.animate-candle-flame {
+  animation: candleFlicker 3s infinite ease-in-out;
+}
+
+/* Ghostly spectral mist drift */
+@keyframes mistDrift {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.animate-mist {
+  animation: mistDrift 28s infinite linear;
+}
+
+/* Pulsing spectral glow */
+@keyframes spectralPulse {
+  0%, 100% {
+    opacity: 0.4;
+    filter: drop-shadow(0 0 10px rgba(94, 234, 212, 0.3));
+  }
+  50% {
+    opacity: 0.85;
+    filter: drop-shadow(0 0 25px rgba(94, 234, 212, 0.7));
+  }
+}
+
+.animate-spectral-pulse {
+  animation: spectralPulse 4s infinite ease-in-out;
+}
+
+/* Frosted glass antique text etching reveal */
+@keyframes inkBleed {
+  from {
+    opacity: 0;
+    filter: blur(8px) contrast(150%);
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px) contrast(100%);
+    transform: scale(1);
+  }
+}
+
+.animate-ink-bleed {
+  animation: inkBleed 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom scrollbar for Victorian grimoire */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d0c10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2b2521;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4a3e35;
+}
